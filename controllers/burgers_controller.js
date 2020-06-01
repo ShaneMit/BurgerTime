@@ -1,6 +1,6 @@
 const router = require('express').Router()
-const burger = require('../models/burger.js')
+const { Burger } = require('../models/burger.js')
 
-// Create router
+// GET all burgers
 
 module.exports = router
