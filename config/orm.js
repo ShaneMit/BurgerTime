@@ -8,6 +8,13 @@ module.exports = {
       cb(data)
     })
   },
+  // GET one
+  getAllWhere (table, where, cb) {
+    db.query(`SELECT * FROM ${table} WHERE ?`, where, (err, data) => {
+      if (err) { console.log(err) }
+      cb(data)
+    })
+  },
   // INSERT one
   createOne (table, data, cb) {
     db.query(`INSERT INTO ${table} SET ?`, data, (err, info) => {

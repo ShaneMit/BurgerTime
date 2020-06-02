@@ -1,9 +1,13 @@
 const router = require('express').Router()
-const { Burger } = require('../models/burger')
-
+const Burger = require('../models/burger.js')
+console.log(Burger, '$$$$$$')
 // GET all burgers
 router.get('/burgers', (req, res) => Burger
 .getBurg(burgers => res.json(burgers)))
+
+// GET one burger
+router.get('/burgers/:id', (req, res) => Burger
+.getBurgWhere({ id: req.params.id }, burger => res.json(burger)))
 
 // POST one burger
 router.post('/burgers', (req, res) => Burger
