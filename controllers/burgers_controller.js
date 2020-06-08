@@ -1,6 +1,5 @@
 const router = require('express').Router()
 const Burger = require('../models/burger.js')
-console.log(Burger, '$$$$$$')
 // GET all burgers
 router.get('/burgers', (req, res) => Burger
 .getBurg(burgers => res.json(burgers)))
