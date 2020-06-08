@@ -1,4 +1,4 @@
-const orm = require('../config/orm')
+const orm = require('../config/orm.js')
 
 module.exports = {
   getBurgers (cb) {
