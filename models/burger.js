@@ -1,16 +1,16 @@
-const orm = require('../config/orm.js')
+const orm = require('../config/orm')
 
 module.exports = {
-  getBurgers (cb) {
+  getBurgers(cb) {
     orm.getAll('burgers', burgers => cb(burgers))
   },
-  getBurgersWhere (where, cb) {
+  getBurgersWhere(where, cb) {
     orm.getAllWhere('burgers', where, burgers => cb(burgers))
   },
-  addBurger (burger, cb) {
+  addBurger(burger, cb) {
     orm.createOne('burgers', burger, info => cb(info))
   },
-  updateBurger (changes, where, cb) {
+  updateBurger(changes, where, cb) {
     orm.updateOne('burgers', changes, where, info => cb(info))
   }
 }
